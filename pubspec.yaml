@@ -1,15 +1,21 @@
 name: flukit_utils
-description: "A new Flutter package project."
+description: "utility package within the Flukit framework."
 version: 0.0.1
-homepage:
+homepage: https://github.com/iuxcode/flukit_utils.git
+publish_to: none
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: ">=3.3.0 <4.0.0"
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
+  flukit_core:
+    path: ../flukit_core
+  phone_number: ^2.1.0
+  intl: ^0.19.0
+  timeago: ^3.6.1
 
 dev_dependencies:
   flutter_test:
