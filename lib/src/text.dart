@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:timeago/timeago.dart' as time;
 
 /// Text utilities extensions on [FluInterface]
-extension FluTexts on Flu {
+extension FluTexts on Flukit {
   /// Generate DateTime from timestamp || must be integer
   DateTime dateTimeFromTimestamp(int timestamp) =>
       DateTime.fromMillisecondsSinceEpoch(timestamp * 1000);

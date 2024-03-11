@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:phone_number/phone_number.dart';
 
 /// Add core utilities to [FluInterface]
-extension CoreExt on Flu {
+extension CoreExt on Flukit {
   /// As a rule, Flutter knows which widget to update,
   /// so this command is rarely needed. We can mention situations
   /// where you use const so that widgets are not updated with setState,
