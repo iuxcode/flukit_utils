@@ -2,7 +2,7 @@ import 'package:flukit_core/flukit_core.dart';
 import 'package:intl/intl.dart';
 import 'package:timeago/timeago.dart' as time;
 
-/// Text utilities extensions on [FluInterface]
+/// Text utilities extensions on [Flukit]
 extension FluTexts on Flukit {
   /// Generate DateTime from timestamp || must be integer
   DateTime dateTimeFromTimestamp(int timestamp) =>
@@ -60,7 +60,9 @@ extension FluTexts on Flukit {
 
   /// format seconds to time
   String timeLeft(int value) {
-    int h, m, s;
+    int h;
+    int m;
+    int s;
 
     h = value ~/ 3600;
     m = (value - h * 3600) ~/ 60;

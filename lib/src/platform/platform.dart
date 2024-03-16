@@ -1,4 +1,5 @@
-import 'platform_web.dart' if (dart.library.io) 'platform_io.dart';
+import 'package:flukit_utils/src/platform/platform_web.dart'
+    if (dart.library.io) 'platform_io.dart';
 
 /// Determine on Which OS the app is running
 class FluPlatform {

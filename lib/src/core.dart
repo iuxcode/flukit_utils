@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:phone_number/phone_number.dart';
 
-/// Add core utilities to [FluInterface]
+/// Add core utilities to [Flukit]
 extension CoreExt on Flukit {
   /// As a rule, Flutter knows which widget to update,
   /// so this command is rarely needed. We can mention situations

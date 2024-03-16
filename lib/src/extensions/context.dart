@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+// ignore: public_member_api_docs
 extension ContextExt on BuildContext {
   /// The same of [MediaQuery.of(context).size]
   Size get mediaQuerySize => MediaQuery.of(this).size;

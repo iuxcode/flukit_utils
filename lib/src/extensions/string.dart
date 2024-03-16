@@ -1,5 +1,6 @@
 import 'package:flukit_utils/flukit_utils.dart';
 
+// ignore: public_member_api_docs
 extension StringUtils on String {
   /// Discover if the String is a valid number
   bool get isNum => FluUtils.isNum(this);
@@ -7,6 +8,9 @@ extension StringUtils on String {
   /// Discover if the String is numeric only
   bool get isNumericOnly => FluUtils.isNumericOnly(this);
 
+  /// Extracts numeric characters from the string.
+  /// Can specify if only the first word should be considered.
+  /// Returns a string containing only numeric characters.
   String numericOnly({bool firstWordOnly = false}) =>
       FluUtils.numericOnly(this, firstWordOnly: firstWordOnly);
 
@@ -70,18 +74,19 @@ extension StringUtils on String {
   /// Discover if the String is a SHA256 Hash
   bool get isSHA256 => FluUtils.isSHA256(this);
 
-  /// Discover if the String is a bynary value
+  /// Discover if the String is a binary value
   bool get isBinary => FluUtils.isBinary(this);
 
-  /// Discover if the String is a ipv4
+  /// Discover if the String is a valid ipv4
   bool get isIPv4 => FluUtils.isIPv4(this);
 
+  /// Returns whether the string is a valid IPv6 address.
   bool get isIPv6 => FluUtils.isIPv6(this);
 
   /// Discover if the String is a Hexadecimal
   bool get isHexadecimal => FluUtils.isHexadecimal(this);
 
-  /// Discover if the String is a palindrom
+  /// Discover if the String is a palindrome
   bool get isPalindrom => FluUtils.isPalindrom(this);
 
   /// Discover if the String is a passport number
