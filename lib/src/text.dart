@@ -48,7 +48,8 @@ extension FluTexts on Flukit {
     } else if (seconds > secondsInOneMinute) {
       final minutes = (seconds / secondsInOneHour) * secondsInOneMinute;
       final m = minutes.toInt();
-      //int? s = int.tryParse(minutes.toString().split('.')[1]); // TODO review
+      // Todo: review
+      //int? s = int.tryParse(minutes.toString().split('.')[1]);
 
       text = '${m}m';
     } else {
