@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:flukit_core/flukit_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:phone_number/phone_number.dart';
+import 'package:phone_numbers_parser/phone_numbers_parser.dart';
 
 /// Add core utilities to [Flukit]
 extension CoreExt on Flukit {
@@ -25,9 +25,6 @@ extension CoreExt on Flukit {
 
   ///The current [WidgetsBinding]
   WidgetsBinding get engine => WidgetsFlutterBinding.ensureInitialized();
-
-  /// Phone number validator plugin
-  PhoneNumberUtil get phoneNumber => PhoneNumberUtil();
 
   /// Provides a haptic feedback indication selection
   /// changing through discrete values.
@@ -73,10 +70,14 @@ extension CoreExt on Flukit {
 
   /// Verify if the [value] is a correct
   /// phone number based on the selected region.
-  Future<bool> validatePhoneNumber(String value, String countryCode) async =>
-      phoneNumber
-          .validate(value, regionCode: countryCode)
-          .onError((error, stackTrace) => false);
+  bool validatePhoneNumber(String value) {
+    return PhoneNumber.parse(value).isValid();
+  }
+
+  /// Find potential numbers in the [value].
+  Iterable<PhoneNumber> findPhoneNumbers(String value) {
+    return PhoneNumber.findPotentialPhoneNumbers(value);
+  }
 
   /// Verify if the [email] is correct.
   /// TODO validate email

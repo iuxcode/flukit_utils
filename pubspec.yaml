@@ -14,7 +14,7 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.19.0
-  phone_number: ^2.1.0
+  phone_numbers_parser: ^8.2.1
   timeago: ^3.6.1
 
 dev_dependencies:
