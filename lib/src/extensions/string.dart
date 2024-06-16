@@ -110,10 +110,10 @@ extension StringUtils on String {
       FluUtils.isCaseInsensitiveContainsAny(this, b);
 
   /// capitalize the String
-  String? get capitalize => FluUtils.capitalize(this);
+  String capitalize() => FluUtils.capitalize(this) ?? this;
 
   /// Capitalize the first letter of the String
-  String? get capitalizeFirst => FluUtils.capitalizeFirst(this);
+  String capitalizeFirst() => FluUtils.capitalizeFirst(this) ?? this;
 
   /// remove all whitespace from the String
   String get removeAllWhitespace => FluUtils.removeAllWhitespace(this);
