@@ -22,7 +22,6 @@ extension NumExt on num {
   }
 
   /// Utility to delay some callback (or code execution).
-  /// TODO: Add a separated implementation of delay() with the ability
   /// to stop it.
   ///
   /// Sample:
