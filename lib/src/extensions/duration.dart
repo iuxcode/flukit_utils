@@ -1,7 +1,7 @@
 import 'dart:async';
 
 /// Duration utilities.
-extension DurationUtils on Duration {
+extension DurationExt on Duration {
   /// Utility to delay some callback (or code execution).
   ///
   /// Sample:
@@ -17,4 +17,27 @@ extension DurationUtils on Duration {
   ///```
   Future<dynamic> delay([FutureOr<dynamic> Function()? callback]) async =>
       Future.delayed(this, callback);
+
+  /// Duration to formatted string
+  /// Eg. To `1:20:10:01`
+  String formatted(
+    Duration duration, {
+    bool withHours = false,
+    bool withMilliseconds = false,
+  }) {
+    final hours = duration.inHours;
+    final minutes = duration.inMinutes;
+    final seconds = duration.inSeconds % 60;
+    final milliseconds = withMilliseconds
+        ? ',${(duration.inMilliseconds % 1000).toString()[0]}'
+        : '';
+
+    final h = withHours && hours > 0
+        ? '${hours < 10 ? "$hours" : hours.toString()}:'
+        : '';
+    final min = minutes < 10 && minutes != 0 ? '0$minutes' : minutes.toString();
+    final sec = seconds < 10 ? '0$seconds' : seconds.toString();
+
+    return '$h:$min:$sec:$milliseconds';
+  }
 }

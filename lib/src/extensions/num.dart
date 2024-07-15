@@ -1,9 +1,8 @@
 import 'dart:async';
-
-import 'package:flukit_utils/flukit_utils.dart';
+import 'package:flukit_utils/src/_utils.dart';
 
 // ignore: public_member_api_docs
-extension NumUtils on num {
+extension NumExt on num {
   /// Returns true if the number is lower than [b], otherwise returns false.
   bool isLowerThan(num b) => FluUtils.isLowerThan(this, b);
 

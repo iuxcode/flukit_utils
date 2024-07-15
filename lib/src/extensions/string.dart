@@ -1,7 +1,7 @@
-import 'package:flukit_utils/flukit_utils.dart';
+import 'package:flukit_utils/src/_utils.dart';
 
 // ignore: public_member_api_docs
-extension StringUtils on String {
+extension StringExt on String {
   /// Discover if the String is a valid number
   bool get isNum => FluUtils.isNum(this);
 
@@ -133,4 +133,18 @@ extension StringUtils on String {
   /// capitalize only first letter in String words to upper case
   String capitalizeAllWordsFirstLetter() =>
       FluUtils.capitalizeAllWordsFirstLetter(this);
+
+  /// Eg `John doe` to `JD`
+  String toAvatarLabel(String text) {
+    var label = text;
+    final array = label.split(' ');
+
+    if (array.length >= 2) {
+      label = array[0][0] + array[array.length - 1][0];
+    } else {
+      label = text[0];
+    }
+
+    return label.toLowerCase();
+  }
 }

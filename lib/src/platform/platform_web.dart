@@ -1,7 +1,7 @@
 // TODO: resolve platform/desktop by JS browser agent.
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
-import 'package:flukit_utils/flukit_utils.dart';
+import 'package:flukit_utils/src/_utils.dart';
 
 html.Navigator _navigator = html.window.navigator;
 
