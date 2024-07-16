@@ -135,14 +135,14 @@ extension StringExt on String {
       FluUtils.capitalizeAllWordsFirstLetter(this);
 
   /// Eg `John doe` to `JD`
-  String toAvatarLabel(String text) {
-    var label = text;
+  String toAvatarLabel() {
+    var label = this;
     final array = label.split(' ');
 
     if (array.length >= 2) {
       label = array[0][0] + array[array.length - 1][0];
     } else {
-      label = text[0];
+      label = this[0];
     }
 
     return label.toLowerCase();
