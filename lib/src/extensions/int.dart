@@ -1,4 +1,6 @@
 // ignore: public_member_api_docs
+import 'package:intl/intl.dart';
+
 extension IntExt on int {
   /// Returns a [Duration] representing the value of the number in seconds.
   Duration get seconds => Duration(seconds: this);
@@ -20,6 +22,10 @@ extension IntExt on int {
 
   /// Returns a [Duration] representing the value of the number in microseconds.
   Duration get microseconds => Duration(microseconds: this);
+
+  /// A number format for compact representations,
+  /// e.g. "1.2M" instead of "1,200,000".
+  String get compactFormat => NumberFormat.compact().format(this);
 
   /// format seconds to time
   String timeLeft(int value) {

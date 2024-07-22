@@ -33,6 +33,5 @@ extension DoubleExt on double {
 
   /// A number format for compact representations,
   /// e.g. "1.2M" instead of "1,200,000".
-  String toCompactFormat(double number) =>
-      NumberFormat.compact().format(number);
+  String get compactFormat => NumberFormat.compact().format(this);
 }
