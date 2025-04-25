@@ -14,14 +14,14 @@ dependencies:
   flutter:
     sdk: flutter
   intl: ^0.19.0
-  phone_numbers_parser: ^8.2.1
+  phone_numbers_parser: ^9.0.3
   timeago: ^3.6.1
 
 dev_dependencies:
-  flutter_lints: ^3.0.0
+  flutter_lints: ^5.0.0
   flutter_test:
     sdk: flutter
-  very_good_analysis: ^5.1.0
+  very_good_analysis: ^7.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
