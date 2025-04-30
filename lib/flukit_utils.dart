@@ -11,3 +11,4 @@ export 'src/extensions/num.dart';
 export 'src/extensions/string.dart';
 export 'src/platform/platform.dart';
 export 'src/utils.dart';
+export 'src/validator.dart';
