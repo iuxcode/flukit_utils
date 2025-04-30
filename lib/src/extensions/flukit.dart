@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:timeago/timeago.dart' as time;
 
 /// Extension to provide utilities access from Flu
-extension FluUtilsExtension on Flukit {
+extension FluUtilsExt on Flukit {
   /// Access to all common utilities
   FluUtils get utils => FluUtils();
 
