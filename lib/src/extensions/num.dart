@@ -1,16 +1,18 @@
 import 'dart:async';
-import 'package:flukit_utils/src/_utils.dart';
+
+import 'package:flukit_core/flukit_core.dart';
+import 'package:flukit_utils/flukit_utils.dart';
 
 // ignore: public_member_api_docs
 extension NumExt on num {
   /// Returns true if the number is lower than [b], otherwise returns false.
-  bool isLowerThan(num b) => FluUtils.isLowerThan(this, b);
+  bool isLowerThan(num b) => Flu.utils.isLowerThan(this, b);
 
   /// Returns true if the number is greater than [b], otherwise returns false.
-  bool isGreaterThan(num b) => FluUtils.isGreaterThan(this, b);
+  bool isGreaterThan(num b) => Flu.utils.isGreaterThan(this, b);
 
   /// Returns true if the number is equal to [b], otherwise returns false.
-  bool isEqual(num b) => FluUtils.isEqual(this, b);
+  bool isEqual(num b) => Flu.utils.isEqual(this, b);
 
   /// A function that returns the absolute value of the input number.
   num toPositive() {

@@ -1,7 +1,8 @@
 // TODO(iuxcode): resolve platform/desktop by JS browser agent.
 // ignore: avoid_web_libraries_in_flutter
 import 'dart:html' as html;
-import 'package:flukit_utils/src/_utils.dart';
+import 'package:flukit_core/flukit_core.dart';
+import 'package:flukit_utils/flukit_utils.dart';
 
 html.Navigator _navigator = html.window.navigator;
 
@@ -29,7 +30,7 @@ class GeneralPlatform {
   /// Whether the operating system is a version of IOS.
   // maxTouchPoints is needed to separate iPad iOS13 vs new MacOS
   bool get isIOS =>
-      FluUtils.hasMatch(_navigator.platform!, '/iPad|iPhone|iPod/') ||
+      Flu.utils.hasMatch(_navigator.platform!, '/iPad|iPhone|iPod/') ||
       (_navigator.platform == 'MacIntel' && _navigator.maxTouchPoints! > 1);
 
   /// Whether the operating system is a version of Fuchsia.
