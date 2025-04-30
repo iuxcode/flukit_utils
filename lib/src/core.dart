@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flukit_core/flukit_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -68,22 +67,8 @@ extension CoreExt on Flukit {
   /// This call has no effects on Android API levels below 23.
   Future<void> triggerHeavyImpactHaptic() async => HapticFeedback.heavyImpact();
 
-  /// Verify if the [value] is a correct
-  /// phone number based on the selected region.
-  bool validatePhoneNumber(String value) {
-    return PhoneNumber.parse(value).isValid();
-  }
-
   /// Find potential numbers in the [value].
   Iterable<PhoneNumber> findPhoneNumbers(String value) {
     return PhoneNumber.findPotentialPhoneNumbers(value);
   }
-
-  /// Verify if the [email] is correct.
-  /// TODO validate email
-  Future<bool> validateEmail(String email) async => throw UnimplementedError();
-
-  /// Decodes base64 or base64url encoded bytes.
-  Uint8List dataFromBase64String(String base64String) =>
-      base64Decode(base64String);
 }

@@ -4,7 +4,7 @@ import 'package:flukit_core/flukit_core.dart';
 import 'package:flukit_utils/flukit_utils.dart';
 
 // ignore: public_member_api_docs
-extension NumUtils on num {
+extension NumExt on num {
   /// Returns true if the number is lower than [b], otherwise returns false.
   bool isLowerThan(num b) => Flu.utils.isLowerThan(this, b);
 
@@ -24,7 +24,6 @@ extension NumUtils on num {
   }
 
   /// Utility to delay some callback (or code execution).
-  /// TODO: Add a separated implementation of delay() with the ability
   /// to stop it.
   ///
   /// Sample:

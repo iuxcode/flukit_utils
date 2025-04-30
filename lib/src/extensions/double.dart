@@ -1,5 +1,7 @@
 import 'dart:math';
 
+import 'package:intl/intl.dart';
+
 // ignore: public_member_api_docs
 extension DoubleExt on double {
   /// Returns the value of the number with the specified number
@@ -28,4 +30,8 @@ extension DoubleExt on double {
 
   /// Returns a [Duration] representing the value of the number in days.
   Duration get days => Duration(hours: (this * Duration.hoursPerDay).round());
+
+  /// A number format for compact representations,
+  /// e.g. "1.2M" instead of "1,200,000".
+  String get compactFormat => NumberFormat.compact().format(this);
 }

@@ -69,7 +69,7 @@ extension ContextExt on BuildContext {
         statusBarIconBrightness: colorScheme.brightness == Brightness.light
             ? Brightness.dark
             : Brightness.light,
-        systemNavigationBarColor: colorScheme.background,
+        systemNavigationBarColor: colorScheme.surface,
         systemNavigationBarIconBrightness: colorScheme.brightness,
       );
 

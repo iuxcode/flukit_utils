@@ -2,7 +2,7 @@ import 'package:flukit_core/flukit_core.dart';
 import 'package:flukit_utils/flukit_utils.dart';
 
 // ignore: public_member_api_docs
-extension StringUtils on String {
+extension StringExt on String {
   /// Discover if the String is a valid number
   bool get isNum => Flu.utils.isNum(this);
 
